@@ -1,0 +1,179 @@
+/* Basic code for the entire page */
+:root {
+  box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  color: white;
+  font-size: x-large;
+  background: #8a2387; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    -45deg,
+    #f27121,
+    #e94057,
+    #8a2387
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    135deg,
+    #f27121,
+    #e94057,
+    #8a2387
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main */
+main {
+  position: relative;
+  width: 100rem;
+  height: 60rem;
+  backdrop-filter: blur(200px);
+  background-color: rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  display: flex;
+}
+
+.player {
+  flex: 50%;
+  padding: 9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 1s;
+}
+
+/* Joueur et score */
+.name {
+  position: relative;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.score {
+  font-size: 8rem;
+  font-weight: 300;
+  margin-bottom: auto;
+}
+
+.playerActif {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.playerActif .name {
+  font-weight: 700;
+}
+
+.playerActif .score {
+  font-weight: 700;
+}
+
+.current {
+  background-color: #8a2387;
+  opacity: 0.7;
+  border-radius: 20px;
+  width: 65%;
+  padding: 1rem;
+  text-align: center;
+  transition: all 1s;
+}
+
+.playerActif .current {
+  opacity: 1;
+}
+
+.currentLabel {
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.currentScore {
+  font-size: 3rem;
+}
+
+/* Bouton et des */
+.btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgb(255, 255, 255);
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  cursor: wait;
+  background-color: rgb(255, 0, 0);
+  backdrop-filter: blur(200px);
+  opacity: 0.7;
+  padding: 0.5rem 2rem;
+  border-radius: 50px;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+  transition: all 0.5s;
+}
+
+.pictoBtn {
+  height: 24px;
+  width: auto;
+  margin-right: 4px;
+  vertical-align: text-bottom;
+}
+
+.btnNew {
+  top: 4rem;
+}
+
+.btnRoll {
+  top: 39rem;
+}
+
+.btnHold {
+  top: 50rem;
+}
+
+.btn:active {
+  transform: translate(-50%, 10px);
+  box-shadow: 0 0 2rem rgb(255, 255, 255);
+}
+
+.btn:hover {
+  background-color: #8a2387;
+}
+
+.des {
+  position: absolute;
+  left: 50%;
+  top: 17rem;
+  transform: translateX(-50%);
+  height: 15rem;
+}
+
+.playerWin {
+  background-color: #ff00ee53;
+}
+
+.playerWin .name {
+  font-weight: 900;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.hide {
+  display: none;
+}

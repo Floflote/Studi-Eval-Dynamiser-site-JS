@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Page du jeu de dés en duo!" />
+    <meta name="keywords" content="jeu, dés, javascript" />
+    <meta name="author" content="FloFlote" />
+    <title>Jeu de dés en Duo</title>
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="./Code/styles.css" />
+    <!-- Add font style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+    </style>
+  </head>
+
+  <!-- Code body -->
+  <body>
+    <main>
+      <!-- Joueur 1 ou 0-CSS-JS -->
+      <section class="player player0 playerActif">
+        <h2 class="name" id="name0">Joueur 1</h2>
+        <p class="score" id="score0">0</p>
+        <div class="current">
+          <p class="currentLabel">Score actuel</p>
+          <p class="currentScore" id="current0">0</p>
+        </div>
+      </section>
+      <!-- Joueur 2 ou 1-CSS-JS -->
+      <section class="player player1">
+        <h2 class="name" id="name1">Joueur 2</h2>
+        <p class="score" id="score1">0</p>
+        <div class="current">
+          <p class="currentLabel">Score actuel</p>
+          <p class="currentScore" id="current1">0</p>
+        </div>
+      </section>
+      <!-- Boutons et des -->
+      <section>
+        <img src="./Ressources/Pictos/Pictos_Des1.svg" alt="Des" class="des" />
+        <button class="btn btnNew">
+          <img
+            src="./Ressources/Pictos/Pictos_Add-white.svg"
+            alt="Add"
+            class="pictoBtn"
+          />
+          Nouvelle partie
+        </button>
+        <button class="btn btnRoll">
+          <img
+            src="./Ressources/Pictos/Pictos_Reload-white.svg"
+            alt="Reload"
+            class="pictoBtn"
+          />
+          Lancer le dés
+        </button>
+        <button class="btn btnHold">
+          <img
+            src="./Ressources/Pictos/Pictos_hold-white.svg"
+            alt="Hold"
+            class="pictoBtn"
+          />
+          Ajouter ce score
+        </button>
+      </section>
+    </main>
+    <!-- JavaScript -->
+    <script src="./Code/script.js" type="text/javascript"></script>
+  </body>
+</html>
