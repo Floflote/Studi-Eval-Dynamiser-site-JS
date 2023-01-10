@@ -48,7 +48,7 @@ btnHold.addEventListener("click", function () {
     scores[activePlayer] += currentScore;
     document.getElementById(`score${activePlayer}`).textContent =
       scores[activePlayer];
-    if (scores[activePlayer] >= 10) {
+    if (scores[activePlayer] >= 100) {
       playerPlaying = false;
       img.classList.add("hide");
       document.getElementById(`score${activePlayer}`).textContent = "Gagné !";
@@ -60,7 +60,6 @@ btnHold.addEventListener("click", function () {
       document
         .querySelector(`.player${activePlayer}`)
         .classList.add("playerActif");
-      console.log(activePlayer);
     } else {
       switchPlayer();
     }

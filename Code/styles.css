@@ -1,11 +1,20 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* Basic code for the entire page */
 :root {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 *,
 ::after,
 ::before {
+  -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
 
@@ -15,21 +24,22 @@ body {
   height: 100vh;
   color: white;
   font-size: 5rem;
-  background: #8a2387; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    -45deg,
-    #f27121,
-    #e94057,
-    #8a2387
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: #8a2387; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  background: -o-linear-gradient(315deg, #f27121, #e94057, #8a2387);
   background: linear-gradient(
     135deg,
     #f27121,
     #e94057,
     #8a2387
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -38,24 +48,46 @@ main {
   position: relative;
   width: 90vw;
   height: 80vh;
+  -webkit-backdrop-filter: blur(200px);
   backdrop-filter: blur(200px);
   background-color: rgba(255, 255, 255, 0.2);
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   justify-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
 .player {
+  -webkit-box-flex: 50%;
+  -ms-flex: 50%;
   flex: 50%;
   padding: 3rem;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-line-pack: distribute;
   align-content: space-around;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
   transition: all 1s;
 }
 
@@ -93,6 +125,8 @@ main {
   width: 50%;
   padding: auto;
   text-align: center;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
   transition: all 1s;
   margin: auto;
 }
@@ -115,6 +149,8 @@ main {
 .btn {
   position: absolute;
   left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   color: rgb(255, 255, 255);
   background: none;
@@ -125,11 +161,15 @@ main {
   text-transform: uppercase;
   cursor: wait;
   background-color: rgb(255, 0, 0);
+  -webkit-backdrop-filter: blur(200px);
   backdrop-filter: blur(200px);
   opacity: 0.7;
   padding: 0.5rem 2rem;
   border-radius: 50px;
+  -webkit-box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
   margin: 0;
 }
@@ -154,7 +194,10 @@ main {
 }
 
 .btn:active {
+  -webkit-transform: translate(-50%, 10px);
+  -ms-transform: translate(-50%, 10px);
   transform: translate(-50%, 10px);
+  -webkit-box-shadow: 0 0 2rem rgb(255, 255, 255);
   box-shadow: 0 0 2rem rgb(255, 255, 255);
 }
 
@@ -166,6 +209,8 @@ main {
   position: absolute;
   left: 50%;
   top: 20vh;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   height: 15rem;
 }
