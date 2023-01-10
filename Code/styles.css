@@ -14,7 +14,7 @@ body {
   font-weight: 400;
   height: 100vh;
   color: white;
-  font-size: x-large;
+  font-size: 5rem;
   background: #8a2387; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     -45deg,
@@ -36,42 +36,46 @@ body {
 /* Main */
 main {
   position: relative;
-  width: 100rem;
-  height: 60rem;
+  width: 90vw;
+  height: 80vh;
   backdrop-filter: blur(200px);
   background-color: rgba(255, 255, 255, 0.2);
   overflow: hidden;
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
 }
 
 .player {
   flex: 50%;
-  padding: 9rem;
+  padding: 3rem;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-content: space-around;
   transition: all 1s;
 }
 
 /* Joueur et score */
 .name {
-  position: relative;
-  font-size: 4rem;
+  font-size: 3rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  word-spacing: 2px;
   font-weight: 400;
-  margin-bottom: 1rem;
+  margin: auto;
 }
 
 .score {
-  font-size: 8rem;
+  font-size: 4rem;
   font-weight: 300;
-  margin-bottom: auto;
+  margin: auto;
 }
 
 .playerActif {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 100%;
 }
 
 .playerActif .name {
@@ -86,10 +90,11 @@ main {
   background-color: #8a2387;
   opacity: 0.7;
   border-radius: 20px;
-  width: 65%;
-  padding: 1rem;
+  width: 50%;
+  padding: auto;
   text-align: center;
   transition: all 1s;
+  margin: auto;
 }
 
 .playerActif .current {
@@ -126,6 +131,7 @@ main {
   border-radius: 50px;
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
   transition: all 0.5s;
+  margin: 0;
 }
 
 .pictoBtn {
@@ -136,15 +142,15 @@ main {
 }
 
 .btnNew {
-  top: 4rem;
+  top: 4vh;
 }
 
 .btnRoll {
-  top: 39rem;
+  top: 60vh;
 }
 
 .btnHold {
-  top: 50rem;
+  top: 70vh;
 }
 
 .btn:active {
@@ -159,19 +165,24 @@ main {
 .des {
   position: absolute;
   left: 50%;
-  top: 17rem;
+  top: 20vh;
   transform: translateX(-50%);
   height: 15rem;
 }
 
 .playerWin {
-  background-color: #ff00ee53;
+  background-color: #9d009359;
+  height: 100%;
 }
 
 .playerWin .name {
   font-weight: 900;
   font-style: italic;
   text-decoration: underline;
+}
+
+.playerWin .score {
+  font-weight: 900;
 }
 
 .hide {
