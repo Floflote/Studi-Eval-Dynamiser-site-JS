@@ -80,6 +80,7 @@ btnNew.addEventListener("click", function () {
   document.querySelector(`.player${activePlayer}`).classList.add("playerActif");
   scores[0] = 0;
   scores[1] = 0;
+  currentScore = 0;
   current0.textContent = 0;
   current1.textContent = 0;
   score0.textContent = 0;
